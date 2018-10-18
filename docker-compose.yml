@@ -14,8 +14,6 @@ services:
     build:
       context: ./docker
     restart: always
-    env_file:
-      - ./.env
     #Mapping the volumes
     volumes:
       #Current dir + /docker/config will be mapped on /root/.jupyter/
