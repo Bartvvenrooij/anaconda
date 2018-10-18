@@ -1,6 +1,9 @@
 #Docker compose version
 version: '3'
 
+volumes:
+  packages:
+
 services:
   #Anaconda image
   anaconda:
@@ -20,3 +23,4 @@ services:
       - ./docker/config:/root/.jupyter/
       #Current dir + /scripts will be mapped on /opt/notebooks
       - ./scripts:/opt/notebooks
+#      - packages:/opt/conda/lib
